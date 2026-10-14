@@ -72,8 +72,20 @@ function serve() {
     gulp.watch(paths.images.src, images);
 }
 
+function copyBootstrapCSS() {
+  return gulp.src('./node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(gulp.dest('./dist/css'));
+}
+
+function copyBootstrapJS() {
+  return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(gulp.dest('./dist/js'));
+}
+
+
 const build = gulp.series(gulp.parallel(html, styles, scripts, images));
 const watch = gulp.series(build, serve);
+const bootstrap = gulp.parallel(copyBootstrapCSS, copyBootstrapJS);
 
 exports.html = html;
 exports.styles = styles;
@@ -81,3 +93,4 @@ exports.scripts = scripts;
 exports.images = images;
 exports.build = build;
 exports.default = watch;
+exports.bootstrap = gulp.parallel(copyBootstrapCSS, copyBootstrapJS);

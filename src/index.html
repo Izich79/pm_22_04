@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лаб1</title>
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Цей рядок Gulp автоматично замінить на вміст файлу header.html -->
-    @@include('components/header.html')
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-4">Блок 1 (Колонка)</div>
+      <button class="btn btn-primary">Кнопка</button>
+      <div class="col-md-8">Блок 2 (Основний контент)</div>
+      <div class="card"><div class="card-body">Картка контенту</div></div>
+      <ul class="list-group"><li class="list-group-item">Елемент</li></ul>
+    </div>
+  </div>
 
-    <script src="js/main.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
-</html>

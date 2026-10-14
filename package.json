@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Izich79/pm_22_04#readme",
   "devDependencies": {
+    "bootstrap": "^5.3.8",
     "browser-sync": "^3.0.4",
     "gulp": "^5.0.1",
     "gulp-cssnano": "^2.1.3",
