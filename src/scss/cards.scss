@@ -1,0 +1,44 @@
+@import 'style';
+@import 'mixins';
+
+.btn-base {
+  padding: $small-padding $base-padding;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.custom-header {
+  background: linear-gradient(135deg, $secondary-color, $primary-color);
+  color: #ffffff;
+  padding-bottom: $large-padding;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #fff !important;
+  }
+
+  .hero-section {
+    h1 {
+      font-family: $font-main;
+      margin-bottom: $base-padding;
+    }
+
+    p {
+      opacity: 0.9;
+    }
+  }
+
+  .btn-custom-primary {
+    @extend .btn-base;
+    background-color: $accent-color;
+    color: #ffffff;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      color: #ffffff;
+    }
+  }
+}

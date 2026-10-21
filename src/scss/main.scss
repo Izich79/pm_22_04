@@ -1,0 +1,14 @@
+@import 'style';
+@import 'mixins';
+@import 'header';
+@import 'cards';
+@import 'footer';
+
+body {
+  font-family: $font-main;
+  background-color: $bg-light;
+  color: $text-dark;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

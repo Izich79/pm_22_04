@@ -1,5 +1,10 @@
-$bg-color: rgb(231, 139, 139);
-body {
-    background-color: $bg-color;
-    font-family: sans-serif;
-}
+$primary-color: #6366f1;
+$secondary-color: #0f172a;
+$accent-color: #38bdf8;
+$bg-light: #f8fafc;
+$text-dark: #1e293b;
+$font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+$base-padding: 1rem;
+$large-padding: $base-padding * 2;
+$small-padding: $base-padding / 2;

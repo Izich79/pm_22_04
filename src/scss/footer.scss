@@ -1,0 +1,11 @@
+@import 'style';
+
+.custom-footer {
+  background-color: $secondary-color;
+  color: #ffffff;
+  border-top: 3px solid $primary-color;
+
+  p {
+    margin-bottom: $small-padding;
+  }
+}
