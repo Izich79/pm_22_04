@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'base';
+
+.experience {
+  margin-bottom: $gap * 3;
+
+  .section-title {
+    @extend %section-title;
+  }
+
+  .job {
+    @extend %timeline-item;
+    border: 0;
+    background: transparent;
+    font-size: $small;
+
+    em {
+      color: $muted;
+    }
+
+    p {
+      margin: 0.35rem 0 0;
+      color: $muted;
+    }
+
+    &__years {
+      font-weight: 600;
+    }
+  }
+
+  .item-title {
+    margin: 0;
+    font-size: $font-base * 0.95;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

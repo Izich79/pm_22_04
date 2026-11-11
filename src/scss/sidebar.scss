@@ -1,0 +1,71 @@
+@use 'sass:math';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+
+.sidebar {
+  @include vertical-line($muted);
+  padding-top: 0;
+  background: $dark;
+  color: #fff;
+
+  .section-title {
+    @extend %section-title;
+  }
+
+  &__top {
+    position: relative;
+    z-index: 2;
+    margin-left: -$content-pad;
+    margin-right: -$gap * 2;
+    aspect-ratio: 1 / 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: $yellow;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    left: math.div(100%, 5);
+    top: 21%;
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 4px solid #fff;
+    border-radius: 50% 50% 50% 0;
+  }
+
+  &__section {
+    padding: $gap 0;
+
+    & + & {
+      border-top: 1px dashed $muted;
+    }
+  }
+
+  .timeline li {
+    @extend %timeline-item;
+    font-size: $small;
+  }
+
+  .item-title {
+    margin: 0 0 0.25rem;
+    font-size: $font-base * 0.95;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.85;
+  }
+
+  i {
+    color: #fff;
+  }
+}

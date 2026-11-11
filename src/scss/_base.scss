@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+%section-title {
+  position: relative;
+  margin: 0 0 $gap;
+  font-size: $font-base * 1.35;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  &::before {
+    @include marker(6px, 26px, 0);
+  }
+
+  i {
+    margin-right: 0.35rem;
+  }
+}
+
+%timeline-item {
+  position: relative;
+  margin-bottom: $gap * 1.25;
+
+  &::before {
+    @include marker($dot, $dot, 0.5rem);
+  }
+}

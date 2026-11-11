@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+$yellow: #f2ab00;
+$dark: #2f2f2f;
+$gray: #efefef;
+$muted: #666;
+
+$font-main: 'Raleway', sans-serif;
+$font-base: 1rem;
+
+$gap: 16px;
+$line-x: $gap * 1.5;
+$content-pad: $gap * 3.5;
+$dot: 8px;
+$dot-offset: -($content-pad - $line-x) - math.div($dot, 2) + 1px;
+$small: $font-base * 0.8;

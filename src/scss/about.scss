@@ -1,0 +1,17 @@
+@use 'variables' as *;
+@use 'base';
+
+.about {
+  margin-bottom: $gap * 3;
+
+  .section-title {
+    @extend %section-title;
+  }
+
+  p {
+    text-align: justify;
+    font-size: $small;
+    line-height: 1.7;
+    color: $muted;
+  }
+}

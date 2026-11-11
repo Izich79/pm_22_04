@@ -1,14 +1,40 @@
-@import 'style';
-@import 'mixins';
-@import 'header';
-@import 'cards';
-@import 'footer';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+@use 'sidebar';
+@use 'header';
+@use 'about';
+@use 'experience';
+@use 'skills';
 
 body {
+  margin: 0;
+  background: #d9d9d9;
   font-family: $font-main;
-  background-color: $bg-light;
-  color: $text-dark;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  color: $dark;
+}
+
+.resume {
+  max-width: 900px;
+  margin: $gap * 2 auto;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.content {
+  @include vertical-line($dark);
+  position: relative;
+  padding-top: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    height: 90px;
+    background: $yellow;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
 }

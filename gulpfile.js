@@ -3,6 +3,7 @@ const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
@@ -13,7 +14,8 @@ const paths = {
         dest: 'dist/'
     },
     styles: {
-        src: 'src/scss/**/*.scss',
+        src: 'src/scss/main.scss',
+        watch: 'src/scss/**/*.scss',
         dest: 'dist/css/'
     },
     scripts: {
@@ -40,6 +42,7 @@ function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
+        .pipe(rename('index.min.css'))
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream());
 }
@@ -52,7 +55,7 @@ function scripts() {
 }
 
 function images() {
-    return gulp.src(paths.images.src)
+    return gulp.src(paths.images.src, { encoding: false })
         .pipe(imagemin())
         .pipe(gulp.dest(paths.images.dest))
         .pipe(browserSync.stream());
@@ -67,7 +70,7 @@ function serve() {
     });
 
     gulp.watch(paths.html.watch, html);
-    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.styles.watch, styles);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.images.src, images);
 }
@@ -83,7 +86,7 @@ function copyBootstrapJS() {
 }
 
 
-const build = gulp.series(gulp.parallel(html, styles, scripts, images));
+const build = gulp.series(gulp.parallel(html, styles, scripts, images, copyBootstrapCSS, copyBootstrapJS));
 const watch = gulp.series(build, serve);
 const bootstrap = gulp.parallel(copyBootstrapCSS, copyBootstrapJS);
 

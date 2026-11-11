@@ -1,44 +1,31 @@
-@import 'style';
-@import 'mixins';
+@use 'variables' as *;
 
-.btn-base {
-  padding: $small-padding $base-padding;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  border: 2px solid transparent;
-}
+.profile {
+  margin: $gap * 2 (-$gap * 2) $gap * 3 (-$content-pad + $line-x);
+  padding: $gap * 1.5 $gap * 2 $gap * 1.5 $gap * 2;
+  background: $gray;
+  position: relative;
 
-.custom-header {
-  background: linear-gradient(135deg, $secondary-color, $primary-color);
-  color: #ffffff;
-  padding-bottom: $large-padding;
+  &__name {
+    margin: 0;
+    font-size: $font-base * 2.4;
+    font-weight: 800;
+    text-transform: uppercase;
 
-  .navbar-brand {
-    font-size: 1.5rem;
-    color: #fff !important;
-  }
-
-  .hero-section {
-    h1 {
-      font-family: $font-main;
-      margin-bottom: $base-padding;
-    }
-
-    p {
-      opacity: 0.9;
+    span {
+      color: $yellow;
     }
   }
 
-  .btn-custom-primary {
-    @extend .btn-base;
-    background-color: $accent-color;
-    color: #ffffff;
+  &__role {
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $muted;
+  }
 
-    &:hover {
-      background-color: darken($accent-color, 10%);
-      color: #ffffff;
-    }
+  &__cv {
+    margin-top: $gap * 0.75;
+    font-weight: 600;
   }
 }

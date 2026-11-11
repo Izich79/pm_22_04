@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'base';
+
+.skills {
+  padding-bottom: $gap * 4;
+
+  .section-title {
+    @extend %section-title;
+  }
+
+  .skill__name {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: $small * 0.85;
+    font-weight: 700;
+  }
+
+  .progress {
+    height: 5px;
+    background: #ccc;
+    border-radius: 3px;
+  }
+
+  .progress-bar {
+    background: $yellow;
+  }
+}
