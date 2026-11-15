@@ -16,12 +16,8 @@
   }
 
   .progress {
-    height: 5px;
-    background: #ccc;
-    border-radius: 3px;
-  }
-
-  .progress-bar {
-    background: $yellow;
+    --bs-progress-height: 5px;
+    --bs-progress-bg: #{$progress-bg};
+    --bs-progress-bar-bg: #{$yellow};
   }
 }

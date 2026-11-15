@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background: #d9d9d9;
+  background: $page-bg;
   font-family: $font-main;
   color: $dark;
 }
@@ -17,8 +17,8 @@ body {
 .resume {
   max-width: 900px;
   margin: $gap * 2 auto;
-  background: #fff;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  background: $white;
+  box-shadow: $shadow;
   overflow: hidden;
 }
 

@@ -4,12 +4,30 @@
 @mixin marker($width, $height, $top) {
   content: '';
   position: absolute;
+  z-index: 2;
   left: $dot-offset - math.div($width - $dot, 2);
   top: $top;
   width: $width;
   height: $height;
   border-radius: $width;
   background: $yellow;
+}
+
+@mixin icon-badge($size, $bg) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $bg;
+  color: $dark;
+
+  svg {
+    width: 58%;
+    height: 58%;
+  }
 }
 
 @mixin vertical-line($color) {

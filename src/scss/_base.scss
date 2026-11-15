@@ -12,8 +12,10 @@
     @include marker(6px, 26px, 0);
   }
 
-  i {
-    margin-right: 0.35rem;
+  .icon {
+    @include icon-badge($gap * 1.75, $yellow);
+    margin-right: 0.5rem;
+    vertical-align: middle;
   }
 }
 
