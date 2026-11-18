@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $gap * 2;
+  height: $gap * 2;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    width: $gap * 0.6;
+    height: $gap * 0.6;
+    border-right: 2px solid $dark;
+    border-bottom: 2px solid $dark;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+  }
+
+  &.rotated::before {
+    transform: rotate(-135deg);
+  }
+}
+
+.is-hidden {
+  display: none;
+}

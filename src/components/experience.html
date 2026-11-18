@@ -1,29 +1,9 @@
 <section class="experience">
-    <h2 class="section-title"><span class="icon">@@include('../imgs/icons/job.svg')</span> Job Experience</h2>
-    <ul class="list-unstyled timeline">
-        <li class="card job">
-            <div class="d-flex justify-content-between">
-                <h3 class="item-title">Senior Web Designer</h3>
-                <span class="job__years">2020 - Present</span>
-            </div>
-            <em>Creative Agency / Chicago</em>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-        </li>
-        <li class="card job">
-            <div class="d-flex justify-content-between">
-                <h3 class="item-title">Graphic Designer</h3>
-                <span class="job__years">2015 - 2020</span>
-            </div>
-            <em>Creative Market / Chicago</em>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-        </li>
-        <li class="card job">
-            <div class="d-flex justify-content-between">
-                <h3 class="item-title">Marketing Manager</h3>
-                <span class="job__years">2013 - 2015</span>
-            </div>
-            <em>Manufacturing Agency / NJ</em>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-        </li>
-    </ul>
+    <h2 class="section-title">
+        <span class="icon">@@include('../imgs/icons/job.svg')</span> Job Experience
+        <button class="toggle" type="button" data-target="experienceContent" aria-label="Show or hide job experience" aria-expanded="true"></button>
+    </h2>
+    <div id="experienceContent">
+        <ul class="list-unstyled timeline" id="jobsList"></ul>
+    </div>
 </section>

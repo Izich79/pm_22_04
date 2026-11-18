@@ -3,6 +3,8 @@
 
 %section-title {
   position: relative;
+  display: flex;
+  align-items: center;
   margin: 0 0 $gap;
   font-size: $font-base * 1.35;
   font-weight: 800;
